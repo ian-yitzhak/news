@@ -32,7 +32,7 @@ def home(request):
 
         return render( request , 'iano/contact.html')
 
-    return render( request , 'iano/home.html'  , {'post' : posts})
+    return render( request , 'iano/index.html'  , {'post' : posts})
 
 
 def contact(request):
@@ -41,12 +41,6 @@ def contact(request):
     return render( request , 'iano/contact.html')
 
 
-
-
-def fb(request):
-
-
-    return render( request , 'iano/home.html')
 
 
 
