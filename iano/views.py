@@ -19,26 +19,21 @@ def home(request):
 
     if request.method =="POST":
 
-        contact = Contact()
-        name = request.POST.get('name')
+       
         email = request.POST.get('email')
-        phone = request.POST.get('phone')
+        
         subject = request.POST.get('subject')
-        contact.name=name
+       
         contact.email=email
-        contact.phone=phone
+        
         contact.subject=subject
         contact.save()
 
         return render( request , 'iano/contact.html')
 
-    return render( request , 'iano/index.html'  , {'post' : posts})
+    return render( request , 'iano/index.html'  , {'posts' : posts})
 
 
-def contact(request):
-
-
-    return render( request , 'iano/contact.html')
 
 
 
